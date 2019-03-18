@@ -1,0 +1,21 @@
+<mat-toolbar color="primary">
+  <a mat-button routerLink="/">
+    <span>Quizillion</span>
+  </a>
+  <!-- options when user is logged in-->
+  <span *ngIf="loggedIn; else loggedOut">
+    <span fxShow="true" fxHide.lt-md="true">
+      <a mat-button>List</a>
+    </span>
+    <span fxShow="true" fxHide.lt-md="true">
+      <a mat-button>Settings</a>
+    </span>
+  </span>
+  <!-- options when user is logged out-->
+  <ng-template #loggedOut>
+      <span class="toolbar-spacer"></span>
+      <div fxShow="true" fxHide.lt-md="true">
+        <a mat-button routerLink="/auth">Login</a>
+      </div>
+  </ng-template>
+</mat-toolbar>

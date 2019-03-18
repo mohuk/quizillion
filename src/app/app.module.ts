@@ -7,13 +7,15 @@ import { AngularFirestoreModule } from '@angular/fire/firestore';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { AuthModule } from './auth/auth.module';
 import { environment } from '../environments/environment';
 import { QuizModule } from './quiz/quiz.module';
+import { NavBarComponent } from './nav-bar/nav-bar.component';
+import { SharedModule } from './shared/shared.module';
 
 @NgModule({
   declarations: [
     AppComponent,
+    NavBarComponent,
   ],
   imports: [
     BrowserModule,
@@ -22,9 +24,8 @@ import { QuizModule } from './quiz/quiz.module';
     AngularFireModule.initializeApp(environment.firebase, 'quizillion'),
     AngularFireAuthModule,
     AngularFirestoreModule,
-
-    AuthModule,
     QuizModule,
+    SharedModule
   ],
 
   bootstrap: [AppComponent]
