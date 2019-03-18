@@ -1,0 +1,12 @@
+<div >
+  <p>{{(question | async)?.text}}</p>
+
+  <mat-radio-group>
+    <mat-radio-button value="option.key" *ngFor="let option of question.options | keyvalue">{{option.value}}</mat-radio-button>
+  </mat-radio-group>
+</div>
+<code>
+  <pre>
+    {{question | async}}
+  </pre>
+</code>
