@@ -7,7 +7,6 @@ import { AngularFirestoreModule } from '@angular/fire/firestore';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { AuthService } from './auth/auth.service';
 import { AuthModule } from './auth/auth.module';
 import { environment } from '../environments/environment';
 import { QuizModule } from './quiz/quiz.module';

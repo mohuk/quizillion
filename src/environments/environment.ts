@@ -5,7 +5,7 @@
 export const environment = {
   production: false,
   firebase: {
-    apiKey: 'xxxxx',
+    apiKey: 'AIzaSyBYkVS6ugL9YaA47QlVu0CvRErMc9917kM',
     authDomain: 'quizillion.firebaseapp.com',
     databaseURL: 'https://quizillion.firebaseio.com',
     projectId: 'quizillion',
