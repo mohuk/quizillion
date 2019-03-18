@@ -8,14 +8,17 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { environment } from '../environments/environment';
-import { QuizModule } from './quiz/quiz.module';
 import { NavBarComponent } from './nav-bar/nav-bar.component';
 import { SharedModule } from './shared/shared.module';
+import { DashboardComponent } from './dashboard/dashboard.component';
+import { SplashComponent } from './splash/splash.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavBarComponent,
+    DashboardComponent,
+    SplashComponent,
   ],
   imports: [
     BrowserModule,
@@ -24,10 +27,11 @@ import { SharedModule } from './shared/shared.module';
     AngularFireModule.initializeApp(environment.firebase, 'quizillion'),
     AngularFireAuthModule,
     AngularFirestoreModule,
-    QuizModule,
     SharedModule
   ],
 
-  bootstrap: [AppComponent]
+  bootstrap: [
+    AppComponent
+  ]
 })
 export class AppModule { }

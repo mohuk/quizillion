@@ -1,9 +1,0 @@
-<h3>Please select a quiz from the list below to start</h3>
-
-<mat-list role="list">
-  <mat-list-item role="listitem" *ngFor="let quiz of quizList | async"
-  (click)="onQuizClick(quiz.Id)" value="quiz.id">
-    {{quiz.title}}
-  </mat-list-item>
-</mat-list>
-
