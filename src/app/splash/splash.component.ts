@@ -7,12 +7,17 @@ import { Router } from '@angular/router';
   templateUrl: './splash.component.html',
   styleUrls: ['./splash.component.scss']
 })
-export class SplashComponent {
+export class SplashComponent implements OnInit {
   title = 'quizillion';
   constructor(
     private afAuth: AngularFireAuth,
     private router: Router
-  ) { }
+  ) {
+  }
+
+  ngOnInit() {
+    console.log('foo')
+  }
 
   async signin() {
     try {

@@ -12,6 +12,7 @@ import { NavBarComponent } from './nav-bar/nav-bar.component';
 import { SharedModule } from './shared/shared.module';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { SplashComponent } from './splash/splash.component';
+import { AuthGuard } from './auth.guard';
 
 @NgModule({
   declarations: [
@@ -32,6 +33,9 @@ import { SplashComponent } from './splash/splash.component';
 
   bootstrap: [
     AppComponent
+  ],
+  providers: [
+    AuthGuard
   ]
 })
 export class AppModule { }
